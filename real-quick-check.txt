@@ -1,0 +1,9 @@
+# Avoid Hop's redirect headache with:
+curl -sI http://localhost:18080/favicon.ico | head -n1
+
+# Airflow health JSON to show components
+curl -s http://localhost:28080/health | jq .
+
+# URL to check Hop Web's UI (http):
+
+http://0.0.0.0:18080/ui
