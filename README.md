@@ -1,6 +1,6 @@
 
 ===============================================================================
-HOP + AIRFLOW LOCAL TESTING STACK (PLAIN-TEXT README)
+HOP + AIRFLOW LOCAL TESTING STACK
 ===============================================================================
 
 Project root:
