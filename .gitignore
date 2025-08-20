@@ -1,0 +1,14 @@
+.DS_Store
+._*
+terraform.tfstate
+terraform.tfstate.*
+*.log
+*.tmp
+*.bak
+*.swp
+.idea/
+.vscode/
+*.iml
+*.class
+target/
+bin/proof.sh
