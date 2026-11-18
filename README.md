@@ -22,7 +22,7 @@ Not local: the two images are pulled from Docker Hub on first run.
 1. `make up` (first run pulls images; Airflow needs roughly 1-2 minutes to initialise its database)
 2. `make ps` until both containers show `healthy`
 3. `make verify` (prints both codes, exit 0 only if both are 200)
-4. Open http://localhost:18080/ (Hop) and http://localhost:28080/ (Airflow; `standalone` generates an admin user and prints the password in `make logs`)
+4. Open http://localhost:18080/ (Hop) and http://localhost:28080/ (Airflow; `standalone` creates user `admin`; its generated password is in `docker exec airflow cat /opt/airflow/standalone_admin_password.txt`)
 5. `make down` to stop and delete volumes
 
 If a port is taken, change the left-hand side of the `ports:` entry in `docker-compose.yml` and the matching URL in the `Makefile` (`proof` and `verify`). If `make verify` shows `000`, the service is not listening yet: run `make logs` and wait, or `docker compose ps`.

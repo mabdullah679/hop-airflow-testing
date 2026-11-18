@@ -13,7 +13,7 @@ How to run it
 1. Run: make up. The first time it downloads images, and Airflow takes a minute or two to set itself up.
 2. Run: make ps. Wait until both containers say healthy.
 3. Run: make verify. It prints both codes and only succeeds if both are 200.
-4. Open the two web addresses above. Airflow makes an admin user for you and prints the password in the logs (make logs).
+4. Open the two web addresses above. Airflow makes a user called admin for you; its generated password is stored in the file /opt/airflow/standalone_admin_password.txt inside the airflow container (read it with: docker exec airflow cat /opt/airflow/standalone_admin_password.txt).
 5. Run: make down to stop everything and delete its data.
 
 If something goes wrong
